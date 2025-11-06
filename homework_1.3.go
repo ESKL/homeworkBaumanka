@@ -47,9 +47,9 @@ func operationsWithNumbers(){
 			num4,num5 =num5,num4
 		}
 	}
-	fmt.Printf("Все числа по возрастанию: %d, %d, %d, %d, %d \n", num1, num2, num3, num4, num5)
+	fmt.Printf("Все числа по убыванию: %d, %d, %d, %d, %d \n", num5, num4, num3, num2, num1)
 	average = (num1 + num2 + num3 + num4 + num5) / 5
 	fmt.Printf("Средне арифметическое: %d \n", average)
-	fmt.Printf("Минимальное число: %d \n", num1)
-	fmt.Printf("Максимальное число: %d \n", num5)
+	fmt.Printf("Самое маленькое число: %d \n", num1)
+	fmt.Printf("Самое большое число: %d \n", num5)
 }
