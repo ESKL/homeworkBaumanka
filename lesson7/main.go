@@ -2,8 +2,31 @@ package main
 
 import "fmt"
 
-var name string
 
+
+
+func main() {
+	foo()
+}
+
+///////////lessonPractics://////////////
+
+func foo(){
+	defer func(){
+		r := recover()
+		if r != nil{
+			fmt.Println("поймана паника")
+		}
+	}()
+	panic("это паника")
+}
+
+func def(){
+	fmt.Println("1")
+	defer fmt.Println("2")
+	defer fmt.Println("3")
+}
+var name string
 
 func init(){
 	name = "Evgeniy"
@@ -12,13 +35,6 @@ func init(){
 func init(){
 	name ="Arsenya"
 }
-
-func main() {
-	fmt.Println(name)
-}
-
-///////////lessonPractics://////////////
-
 
 // зарезервированные имена:
 // нет сигнатуры, не библиотека, встроенные в язык функции
