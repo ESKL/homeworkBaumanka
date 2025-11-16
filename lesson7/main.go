@@ -13,7 +13,9 @@ func main() {
 }
 
 
-func Sum(x ...int) int{
-	for 
+func Sum(x ...int) (res int){
+	for _, v := range x{
+		res = v
+	} 
 	return 
 }
