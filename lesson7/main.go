@@ -2,6 +2,29 @@ package main
 
 import "fmt"
 
+var name string
+
+
+func init(){
+	name = "Evgeniy"
+}
+
+func init(){
+	name ="Arsenya"
+}
+
+func main() {
+	fmt.Println(name)
+}
+
+///////////lessonPractics://////////////
+
+
+// зарезервированные имена:
+// нет сигнатуры, не библиотека, встроенные в язык функции
+// make(), new(), len(), cap(), delete(), close(), append(), copy()
+// panic(), recover(), main(), 
+// init() - вызывается один раз при инициализации пакета автоматически, до функции main,
 
 
 func Say(animal string) string{
@@ -18,12 +41,9 @@ func Voice(animal string, how func(string) string) {
 	fmt.Println(how(animal))
 }
 
-func main() {
-	Voice("dog", Say)
-}
-
-///////////lessonPractics://////////////
-
+// func main() {
+// 	Voice("dog", Say)
+// }
 
 
 // var funcVar func(int) int
@@ -36,16 +56,16 @@ func main() {
 // 	funcVar = Sq
 // }
 
-func input2ints (x int, y int){
+func Input2ints (x int, y int){
 	fmt.Printf("Два числа: %d и %d", x, y )
 }
 
-func returns2ints()(x int, y int){
+func Returns2ints()(x int, y int){
 	return 7, 10;
 }
 
-func theirdFunc(){
-	input2ints(returns2ints())
+func TheirdFunc(){
+	Input2ints(Returns2ints())
 }
 
 func Sum(x ...int) (res int){
