@@ -2,17 +2,39 @@ package main
 
 import "fmt"
 
-var funcVar func(int) int
 
-func Sq(x int) int{
-	return x*x
+
+func Say(animal string) string{
+	if animal =="dog"{
+		return "wuf"
+	}else if animal =="cat"{
+		return "Myau"
+	} else{
+		return "nah"
+	}
+}
+
+func Voice(animal string, how func(string) string) {
+	fmt.Println(how(animal))
 }
 
 func main() {
-	funcVar = Sq
+	Voice("dog", Say)
 }
 
 ///////////lessonPractics://////////////
+
+
+
+// var funcVar func(int) int
+
+// func Sq(x int) int{
+// 	return x*x
+// }
+
+// func main() {
+// 	funcVar = Sq
+// }
 
 func input2ints (x int, y int){
 	fmt.Printf("Два числа: %d и %d", x, y )
